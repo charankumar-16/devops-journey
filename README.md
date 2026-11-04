@@ -28,6 +28,6 @@
 
 - **globs**
   - Globs let you name many files at Once with a pattern. The shell Expands this Pattern before sending to the command.
-    * -> Matches any number of charactes{includes 0}
-    ? -> Matches exactly one character.
+    - \* -> Matches any number of charactes{includes 0}
+    - ? -> Matches exactly one character.
 
