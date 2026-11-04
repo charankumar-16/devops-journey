@@ -31,3 +31,65 @@
     - \* -> Matches any number of charactes{includes 0}
     - ? -> Matches exactly one character.
 
+## Searching:
+
+- **grep** : This is to search for the text in the file 
+  
+  - grep pattern file_path
+    - **-i** flag is to ignore the case of the pattern
+    - **-v** flag is used to print the lines that doesn't match the pattern
+    - **-c** flag is used to count the number of lines match the pattern
+    - **-n** flag Prints the line number along with the line.
+ 
+  - Searching recursively for a pattern in each file of folder using grep:
+    - 1) grep -r pattern folder 
+    - Narrowing the space :
+      - **grep -r -l pattern folde**r: This prints the file names
+      - **grep -r --include="*.log" pattern folder**: The search space only includes files ending with .log inside the folder.
+
+- **find** : This is to locate the file in the system [**Wildcards work but you must quote them.**]
+  - find "path" {Conditions}
+    - **Conditions :**
+       1. -name 'pattern' - filename (case-sensitive). 
+       2. -iname 'pattern' - filename (case-insensitive).
+       3. -type f - regular files only.
+       4. -type d - directories only.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
