@@ -5,6 +5,7 @@
 - /etc/passwd --> Dictionary of all the accounts in the system. The first entires says the accounts related to the system and last entries are                    done by the user
 - /etc/systemd/system/ --> All the unit files for the local service are present here
 - /var/log/journal --> a Binary log file. journalctl parses while displaying.
+- /etc/hosts --> Before DNS host names are mapped to IP's using this file
 
 
 
