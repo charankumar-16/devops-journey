@@ -4,10 +4,11 @@
     So, that the user could create the Instance and describe the resources. After completing this you will be having a public key and a private key {Using these two keys we need to configure the aws CLI}
  - Now go to the terminal and configure the terminal using the public and private key. So, that we connect to the aws-console.{aws configure}
  - Once this is done, we can go and start creating the Instance.
-	- Step 1: Create a Key Pair [so, that we could able to login to the Instance]
+	- Step 1: Create a Key Pair [so, that we could able to login to the Instance]. 
 			
 		- aws ec2 create-key-pair --key-name my-key --query 'KeyMaterial' --output text > my-key.pem  [KeyMaterial: It selects key content from the response]
 		- chmod 400 my-key.pem [Since It is a Key. we are restricting the permission]
+    *Note: This KeyPair is location specific, If you create this in one location(us-east-1). You cann't use that in any other location*      
 	- Step 2: Create the security group[Firewall]
 		- aws ec2 create-security-group --group-name my-sg --description "My SG"
 		- aws ec2 authorize-security-group-ingress --group-name my-sg --protocol tcp --port 22 --cidr 0.0.0.0/0 [0.0.0.0/0 means we can connect with the Instance from anywhere in the world and we can                  restrict that using our Ip]
@@ -18,6 +19,14 @@
 		  --key-name my-key \
 		  --security-groups my-sg \
  		  --count 1
+
+
+# Connecting from the terminal. 
+  - To connect the Instance, we need to have the publicIp of the machine.
+  - aws ec2 describe-instances --query 'Reservations[].Instances[].[InstanceId,State.Name,PublicIpAddress]' --output table
+    
+  - ssh -i keyPair_filepath ubuntu@PublicIp [with this we connect to the Instance, over the terminal]
+    
 		 
 
 
