@@ -1,10 +1,11 @@
-ec2 Instances available 
+Today date :Sun Nov  8 12:48:01 EST 2026
+###############ec2 Instances available################ 
 {
   "InstanceId": "i-017caf84e13fdc6ab",
   "InstanceType": "t3.micro",
-  "Launchtime": "2026-11-05T23:04:57+00:00"
+  "Launchtime": "2026-11-08T16:29:29+00:00"
 }
-IAM users
+##############IAM users##############
 {
   "UserName": "charan",
   "CreateDate": "2026-10-28T02:44:10+00:00"
@@ -13,8 +14,8 @@ IAM users
   "UserName": "Ram",
   "CreateDate": "2026-11-02T13:32:35+00:00"
 }
-S3 Storage
-Lambda Functions
+##############S3 Storage###########
+##############Lambda Functions########
 {
     "Functions": []
 }
